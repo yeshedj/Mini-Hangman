@@ -19,8 +19,8 @@ reaches the maximum amount of attempts, the game ends"""
         self.mainWin2 = tk.Tk()
         self.mainWin2.title("Hangman Game")
         self.word_to_guess = random.choice(
-            ['apothecary', 'software', 'squirrel', 'library', 'athletic', 'coding', 'solution', 'instrument', 'python', 'blue',
-             'orange', 'headphone', 'surprise']).lower()
+            ['macalester', 'software', 'squirrel', 'library', 'scots', 'coding', 'solution', 'carnegie', 'python', 'liberal',
+             'college', 'headphone', 'programming']).lower()
         self.guessed_letters = []
         self.attempts_left = 6
         self.quitButton = tk.Button(self.mainWin2, text="Quit", bg="SeaGreen", command=self.doQuit, fg="pink",
@@ -102,7 +102,7 @@ reaches the maximum amount of attempts, the game ends"""
         self.secret_word.config(text=hidden_word)
         if '_' not in hidden_word:
             self.win2 = tk.Toplevel()
-            self.img = img = ImageTk.PhotoImage(Image.open("../COMP 123/SampleImages/happySquirrel.jpg"))
+            self.img = img = ImageTk.PhotoImage(Image.open("SampleImagesCS/happySquirrel.jpg"))
             panel = tk.Label(self.win2, image=img)
             panel.grid(row=0, column=0)
             messagebox.showinfo(message="Congratulations! You Guessed the Correct Word!")
@@ -112,7 +112,7 @@ reaches the maximum amount of attempts, the game ends"""
             self.attempts.config(text=f"Attempts Left: {self.attempts_left}")
             if self.attempts_left == 0:
                 self.win3 = tk.Toplevel()
-                self.img = img = ImageTk.PhotoImage(Image.open("../COMP 123/SampleImages/sadSquirrel.jpg"))
+                self.img = img = ImageTk.PhotoImage(Image.open("SampleImagesCS/sadSquirrel.jpg"))
                 panel = tk.Label(self.win3, image=img)
                 panel.grid(row=0, column=0)
                 messagebox.showinfo(message="Oh no! Reset Game to try again!")
